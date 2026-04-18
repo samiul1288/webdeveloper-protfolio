@@ -1,175 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Developer Protfolio</title>
-   <link rel="" href="<link rel= "preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samiul | Portfolio</title>
 
-<link rel="stylesheet" href="mycss1/profolio.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 <script src="https://kit.fontawesome.com/cd005dab4c.js" crossorigin="anonymous"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Open Sans',sans-serif;scroll-behavior:smooth;}
+body{background:#0f172a;color:#e2e8f0;}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;position:sticky;top:0;background:rgba(15,23,42,0.9);backdrop-filter:blur(10px);z-index:100;}
+.nav-title{font-size:28px;font-weight:800;letter-spacing:2px;}
+.nav-title span{color:#38bdf8;}
+nav ul{display:flex;gap:20px;list-style:none;}
+nav a{text-decoration:none;color:#e2e8f0;transition:0.3s;}
+nav a:hover{color:#38bdf8;}
+.bt{background:#38bdf8;color:#000;padding:10px 18px;border:none;border-radius:8px;cursor:pointer;transition:0.3s;}
+.bt:hover{transform:scale(1.05);box-shadow:0 0 15px #38bdf8;}
+
+/* HERO */
+header{min-height:90vh;display:flex;align-items:center;justify-content:center;padding:40px 8%;gap:50px;animation:fadeIn 1s ease;}
+.banner-title{font-size:50px;animation:slideUp 1s ease;}
+.banner-greeting{color:#38bdf8;}
+.banner-description{margin:15px 0;color:#94a3b8;}
+.profile{width:300px;border-radius:20px;animation:float 4s ease-in-out infinite;}
+
+/* SECTION */
+section{padding:80px 8%;}
+.section-title{text-align:center;font-size:32px;margin-bottom:40px;}
+
+/* PROJECTS */
+.about-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.about-item{background:#1e293b;padding:20px;border-radius:15px;transition:0.3s;animation:fadeUp 1s ease;}
+.about-item:hover{transform:translateY(-10px);box-shadow:0 10px 25px rgba(56,189,248,0.3);}
+.item-title{font-weight:700;margin-bottom:10px;}
+.item-description{color:#94a3b8;margin-bottom:15px;}
+
+/* FOOTER */
+.ftb{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:#0b1220;padding:60px 8%;}
+input,textarea{width:100%;padding:10px;margin:10px 0;border:none;border-radius:8px;outline:none;}
+
+/* ANIMATIONS */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-15px)}100%{transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:768px){
+header{flex-direction:column;text-align:center;}
+.ftb{grid-template-columns:1fr;}
+}
+</style>
+
 </head>
-<body class="open-sans-normal">
-    <header class="he sec-bg">
-        
+
+<body>
+
+<!-- NAV -->
 <nav>
-    <h3 class="nav-title">
-        SA<span>M</span>IUL
-    </h3>
-    <ul>
-        <li><a class="dark-2" href="">Protfolio</a></li>
-        <li><a class="dark-2" href="">Blog</a></li>
-        <li><a href=""><button class="bt">Hire Me</button></a></li>
-        
-    </ul>
+<h3 class="nav-title">SA<span>M</span>IUL</h3>
+<ul>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact"><button class="bt">Hire Me</button></a></li>
+</ul>
 </nav>
-<div class="banner">
-    <div class="banner-content">
+
+<!-- HERO -->
+<header>
+<div>
 <h4 class="banner-greeting">Hi, I am</h4>
 <h1 class="banner-title">Samiul</h1>
-<p class="banner-description">Shot what able cold new see hold.Friendly as an betrayed formerly<br> he. Morning because as to society behaved moments.</p>
+<p class="banner-description">Full Stack Web Developer | React | Node.js</p>
 <button class="bt"><i class="fa-solid fa-cloud-arrow-down"></i> Download CV</button>
-<button class="bt"><i class="fa-solid fa-phone"></i> Contact</button>
-    </div>
-    <img  class="profile" src="images/positive_clamper_circuit__1_-removebg-preview.png">
-    </header>
-    <main>
-<section class="about sec-bg">
-<h3 class="section-title text-center">About me</h3>
-<p class="section-description">I, m a designer & developer with a passion for web design. I enjoy developing simple, clean and slick websites that provide real value to the end user. Thousands of clients have procured exceptional resulfs while working with me. Delivering work within time and budget which meets clients requirements in our mata.</p>
+</div>
+<img class="profile" src="images/positive_clamper_circuit__1_-removebg-preview.png">
+</header>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h3 class="section-title">My Projects</h3>
+
 <div class="about-items">
-<div class="about-item">
-    <p class="item-title">name </p>
-    <p class="item-description">Samiul Haque</p>
-</div>
-<div class="about-item">
-    <p class="item-title">Date of Birth</p>
-    <p class="item-description">Dec 16,1972</p>
-</div>
-<div class="about-item">
-    <p class="item-title">Email</p>
-    <p class="item-description">abc@gmail.com</p>
-</div>
-<div class="about-item">
-    <p class="item-title">From</p>
 
-    <p class="item-description">Dhaka,BD
-    </p>
+<div class="about-item">
+<h4 class="item-title">Tuition Management System</h4>
+<p class="item-description">Java + Web App</p>
+<a href="https://tution-management.netlify.app" target="_blank"><button class="bt">View Project</button></a>
 </div>
-    
+
+<div class="about-item">
+<h4 class="item-title">PawMart Client Site</h4>
+<p class="item-description">E-commerce Platform</p>
+<a href="https://pawmart-clientsite.netlify.app/" target="_blank"><button class="bt">View Project</button></a>
+</div>
+
 </div>
 </section>
-<section class="about secondary-bg">
-    <section class="skills">
-        <h3 class="section-title">What I Do</h3>
-       <p class="section-description">I have more than 10 years experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies i use. Want to find out more about my experience? Check out my online resume and project portfolio.
 
-       </p>
-       <div class="skills-container">
-       <!--.skill*4>img+h4.skill-title+p.skill-description-->
-       <div class="skill">
-        <img src="images/icons/js.png" alt="">
-        <h4 class="skill-title">Vanilla JavaScript</h4>
-        <p class="skill-description">List skill/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</p>
-       </div>
-       <div class="skill">
-        <img src="images/icons/react.png" alt="">
-        <h4 class="skill-title c">React</h4>
-        <p class="skill-description">List skill/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</p>
-       </div>
-       <div class="skill">
-        <img src="images/icons/nodejs.png" alt="">
-        <h4 class="skill-title ">Node.js</h4>
-        <p class="skill-description">List skill/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</p>
-       </div>
-       <div class="skill">
-        <img src="images/icons/mongo.png" alt="">
-        <h4 class="skill-title c">MongoDB</h4>
-        <p class="skill-description">List skill/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</p>
-       </div>
-       </div>
-    </section>
-   <section class="resume">
-    <h3 class="section-title">A summary of My Resume</h3>
-   <div class="resume-container">
-    <div class="resume-column">
-        <h3 class="resume-column-title c">MY Education</h3>
-        <div class="experience">
-            <h4 class="experience-title c">Master in Computer Engineering</h4>
-            <h5 class="experience-sub-title c">Dhaka University / 2015 - 2017</h5>
-            <div class="experience-description c">List skill/technologies here. You can change the icon above 
-to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</div>
-        </div>
-        <hr>
-        <div class="experience">
-            <h4 class="experience-title c">Master in Computer Engineering</h4>
-            <h5 class="experience-sub-title c">Dhaka University / 2015 - 2017</h5>
-            <div class="experience-description c">List skill/technologies here. You can change the icon above 
-to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</div>
-        </div>
-        <hr>
-        <div class="experience">
-            <h4 class="experience-title c">Master in Computer Engineering</h4>
-            <h5 class="experience-sub-title c">Dhaka University / 2015 - 2017</h5>
-            <div class="experience-description c">List skill/technologies here. You can change the icon above 
-to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</div>
-        </div>
-    </div>
-    <div class="resume-column">
-        <h3 class="resume-column-title c">My Experience</h3>
-        <div class="experience">
-            <h4 class="experience-title c">Master in Computer Engineering</h4>
-            <h5 class="experience-sub-title c">Dhaka University / 2015 - 2017</h5>
-            <div class="experience-description c">List skill/technologies here. You can change the icon above 
-to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</div>
-        </div>
-        <hr>
-        <div class="experience">
-            <h4 class="experience-title c">Master in Computer Engineering</h4>
-            <h5 class="experience-sub-title c">Dhaka University / 2015 - 2017</h5>
-            <div class="experience-description c">List skill/technologies here. You can change the icon above 
-to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</div>
-        </div>
-        <hr>
-         <div class="experience">
-            <h4 class="experience-title c">Master in Computer Engineering</h4>
-            <h5 class="experience-sub-title c">Dhaka University / 2015 - 2017</h5>
-            <div class="experience-description c">List skill/technologies here. You can change the icon above 
-to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</div>
-        </div>
-    </div>
-   </div>
-   <div class="t-center">
-    <button class ="bt"><i class="fa-solid fa-cloud-arrow-down"></i> Dowload CV</button>
-   </div>
+<!-- ABOUT -->
+<section id="about">
+<h3 class="section-title">About Me</h3>
+<p style="text-align:center;color:#94a3b8;max-width:700px;margin:auto;">
+I am a passionate web developer focused on building modern, responsive and user-friendly web applications using JavaScript, React and Node.js.
+</p>
 </section>
 
-    </main>
-    <footer class="ftb">
-        <div class="footer-column">
-        <h3 class="section-title">Lets Connect</h3>
-<p>Please fill out the form on this section to contact with me or call between 9:00 A.M and 8.00 P.M ET, Monday through Friday.</p>
+<!-- CONTACT -->
+<section id="contact" class="ftb">
+
 <div>
-    <a href="https://www.facebook.com/samiul.haque.ruf.2025/"><img src="images/icons/facebook.png"></a>
-    <a href="https://www.instagram.com/rufsamiul1288/"><img src="images/icons/insta.png"></a>
-    <a href="https://www.instagram.com/rufsamiul1288/"><img src="images/icons/twitter.png"></a>
+<h3 class="section-title">Let's Connect</h3>
+<p style="color:#94a3b8;">Contact me for collaboration or projects.</p>
 </div>
-        </div>
-<div class="footer-column">
-    <h3 class="section-title">Lets Massage Me</h3>
-    <form action="#">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-      <a href="https://m.me/samiul.haque.ruf.2025" target="_blank">
 
-<button type="submit">Submit</button>
-      </a>
+<div>
+<h3 class="section-title">Send Message</h3>
+<form onsubmit="sendMessage(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Message" required></textarea>
+<button class="bt" type="submit">Send</button>
 </form>
-
+<p id="reply" style="margin-top:10px;color:#38bdf8;"></p>
 </div>
-    </footer>
+
+</section>
+
+<script>
+function sendMessage(e){
+e.preventDefault();
+document.getElementById('reply').innerText="Message sent successfully! I will reply soon 🚀";
+}
+</script>
+
 </body>
 </html>
