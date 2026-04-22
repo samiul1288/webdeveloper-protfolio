@@ -1,33 +1,84 @@
-<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samiul | Portfolio</title>
 
+<!-- CSS CONNECT -->
+<link rel="stylesheet" href="mycss1/profolio.css">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- ICON -->
+<script src="https://kit.fontawesome.com/cd005dab4c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2 class="logo">Sa<span>miul</span></h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
 <section class="hero">
 <div class="hero-text">
 <h3>Hello, I'm</h3>
 <h1>Samiul <span id="typing"></span></h1>
 <p>I build scalable web apps using React & Node.js</p>
+
+<a href="cv.pdf" download>
 <button class="btn">Download CV</button>
+</a>
+
 </div>
+
 <div class="hero-img">
 <img src="images/profile.png" alt="profile">
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="section">
 <h2 class="title">Projects</h2>
+
 <div class="cards">
+
 <div class="card">
 <h3>Meal Management System</h3>
 <p>✔ Full stack Java + MySQL<br>✔ Admin system</p>
+
+<a href="https://tution-management.netlify.app" target="_blank">
+<button class="btn">Live</button>
+</a>
+
 </div>
+
 <div class="card">
 <h3>PawMart</h3>
 <p>✔ E-commerce UI<br>✔ Cart system</p>
+
+<a href="https://pawmart-clientsite.netlify.app" target="_blank">
+<button class="btn">Live</button>
+</a>
+
 </div>
+
 </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="section">
 <h2 class="title">Skills</h2>
+
 <div class="skills">
 <div class="skill">HTML</div>
 <div class="skill">CSS</div>
@@ -36,23 +87,31 @@
 <div class="skill">Node.js</div>
 <div class="skill">MySQL</div>
 </div>
+
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
 <h2 class="title">Contact</h2>
+
 <form onsubmit="sendMsg(event)">
 <input type="text" placeholder="Name" required>
 <input type="email" placeholder="Email" required>
 <textarea placeholder="Message"></textarea>
 <button class="btn">Send</button>
 </form>
+
 <p id="msg"></p>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Samiul | All Rights Reserved</p>
 </footer>
 
+<!-- JS CONNECT -->
 <script src="script.js"></script>
+
 </body>
 </html>
