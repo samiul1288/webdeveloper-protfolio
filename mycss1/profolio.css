@@ -1,219 +1,80 @@
 
-.open-sans-normal {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
+*{
 
-.nav-title{
-font-weight: 800;
-font-size: 45px;
-}
-span{
-    color: rgb(63, 150, 243);
-}
-nav{
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-}
-nav ul li{
-    list-style: none;
-    margin-right: 51px;
-   
-}
-nav ul{
-    display: flex;
-    align-items: center;
-}
-nav li a{
-    text-decoration: none;
-     font-size: 15px;
-     
-}
-.dark-2{
-    color: #474747;
-}
-.bt{
-   
-    background-color: orange;
-    font-weight: bold;
-     color: white;
-     padding: 18px 35px;
-     border-radius: 5px;
-     font-size: 20px;
-     border: none;
-     
-}
-.he{
-    background-image: url('../images/developer.png'),url('../images/header_bg.png');
-background-repeat: no-repeat;
-background-position: top left ,bottom right;
-}
-.banner{
-    display: flex;
-    margin: 0 35px 0 200px;
-    
-    justify-content: space-between;
-}
-.banner-greeting{
-    font-size: 45px;
-    font-weight: 600;
-
-}
-.banner-content{
-    width: 580px;
-}
-.banner-title{
-    font-weight: bold;
-    font-size: 85px;
-}
-.profile{
-    width: 585px;
-    
-}
-.section-title{
-    font-size: 35px;
-    font-weight: bold;
-    color: #181818;
-}
-.section-description{
-    font-size: 18px;
-    color: #737373;
-}
-.sec-bg{
-    background-color: #fff8f3;
-}
-.about{
-    border-radius: 10px;
-    gap:130px;
-    padding: 130px 150px;
-    text-align: center;
-   
-}
-.main{
-    max-width: 1140px;
-    margin: 0 auto;
-    
-}
-.item-description{
-     margin: 0;
-    font-weight: 600;
-}
-.about-items{
-    display: flex;
-    justify-content: space-around;
-}
-.about-item {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-    text-align: left;
-}
-
-.item-title{
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.text-center{
-    text-align: center;
-}
-.skills-container{
-    display: flex;
-    gap:24px;
-}
 .skill{
-    border-radius: 5px;
-    padding: 30px;
-    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+background:#38bdf8;
+color:black;
+padding:10px 20px;
+border-radius:20px;
+transition:0.3s;
 }
-.resume-container
-{
-    display: flex;
-    gap: 24px;
+
+.skill:hover{
+transform:scale(1.1);
 }
-.experience-description {
-    color: #757575 ;
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
 }
-.experience-sub-title{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 20px;
+
+input,textarea{
+padding:10px;
+border-radius:8px;
+border:none;
 }
-.resume hr{
-    margin: 30px 5px;
-}
-.c{
-    text-align: left;
-}
-.t-center{
-    margin-top: 50px;
-border-radius: 5px;
-border: 5px black;
-}
-.bt{
-    background-color: orange;
-    color: white;
-    text-shadow: #960505;
-    font-weight: bold;
-}
-.ftb{
-    background-color: lightskyblue;
-}
+
 footer{
-    display: flex;
-    padding: 130px 230px;
-    gap: 110px;
-
-}
-.footer-column {
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
+text-align:center;
+padding:20px;
+color:#94a3b8;
 }
 
-footer input[type="text"],
-footer input[type="email"],
-footer textarea {
-    height: 64px;
-    border-radius: 5px;
-    background-color: white;
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    margin-bottom: 24px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    resize: vertical;
-    box-sizing: border-box;
+@keyframes slideUp{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1;transform:translateY(0)}
 }
 
-/* Adjust height only for textarea */
-footer textarea {
-    height: auto;
-    min-height: 100px;
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+100%{transform:translateY(0)}
 }
 
-footer input[type="text"],
-footer input[type="email"],
-footer textarea {
-    display: block;
-    width: 100%;
-    height: 64px;
-    border-radius: 5px;
-    background-color: white;
-    padding: 10px 20px;
-    margin-bottom: 24px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    box-sizing: border-box;
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1;transform:translateY(0)}
 }
 
-footer textarea {
-    height: auto;
-    min-height: 100px;
-    resize: vertical;
+
+/* ================= script.js ================= */
+
+const text = ["Developer","Programmer","Freelancer"];
+let i=0,j=0,current="",isDeleting=false;
+
+function type(){
+if(i<text.length){
+if(!isDeleting && j<=text[i].length){
+current=text[i].substring(0,j++);
+}
+else if(isDeleting && j>=0){
+current=text[i].substring(0,j--);
+}
+
+document.getElementById("typing").innerText=current;
+
+if(j==text[i].length)isDeleting=true;
+if(j==0){isDeleting=false;i++;}
+}
+setTimeout(type,100);
+}
+
+type();
+
+function sendMsg(e){
+e.preventDefault();
+document.getElementById("msg").innerText="Message sent 🚀";
 }
