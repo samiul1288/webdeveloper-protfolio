@@ -1,102 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samiul | Portfolio</title>
+<!-- index.html -->
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
-<script src="https://kit.fontawesome.com/cd005dab4c.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-<nav>
-<h2 class="logo">Sa<span>miul</span></h2>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-
-<!-- HERO -->
-<section id="home" class="hero">
+<section class="hero">
 <div class="hero-text">
 <h3>Hello, I'm</h3>
-<h1>Samiul</h1>
-<p>I build modern web applications using React & Node.js</p>
-
-<div class="btn-group">
-<a href="#"><button>Download CV</button></a>
-<a href="#contact"><button class="outline">Hire Me</button></a>
+<h1>Samiul <span id="typing"></span></h1>
+<p>I build scalable web apps using React & Node.js</p>
+<button class="btn">Download CV</button>
 </div>
-</div>
-
 <div class="hero-img">
 <img src="images/profile.png" alt="profile">
 </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="section">
 <h2 class="title">Projects</h2>
-
-<div class="card-container">
-
+<div class="cards">
 <div class="card">
-<h3>Tuition Management</h3>
-<p>✔ Student & payment system<br>✔ Admin dashboard</p>
-<div class="card-btn">
-<a href="#"><button>Live</button></a>
-<a href="#"><button class="outline">GitHub</button></a>
+<h3>Meal Management System</h3>
+<p>✔ Full stack Java + MySQL<br>✔ Admin system</p>
 </div>
-</div>
-
 <div class="card">
-<h3>PawMart E-commerce</h3>
-<p>✔ Product system<br>✔ Cart & UI design</p>
-<div class="card-btn">
-<a href="#"><button>Live</button></a>
-<a href="#"><button class="outline">GitHub</button></a>
+<h3>PawMart</h3>
+<p>✔ E-commerce UI<br>✔ Cart system</p>
 </div>
-</div>
-
 </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="section">
 <h2 class="title">Skills</h2>
-
 <div class="skills">
-
 <div class="skill">HTML</div>
 <div class="skill">CSS</div>
 <div class="skill">JavaScript</div>
 <div class="skill">React</div>
 <div class="skill">Node.js</div>
 <div class="skill">MySQL</div>
-
 </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="section">
 <h2 class="title">Contact</h2>
-
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
+<form onsubmit="sendMsg(event)">
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
 <textarea placeholder="Message"></textarea>
-<button>Send Message</button>
+<button class="btn">Send</button>
 </form>
-
+<p id="msg"></p>
 </section>
 
+<footer>
+<p>© 2026 Samiul | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
